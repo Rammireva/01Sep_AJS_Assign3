@@ -1,0 +1,23 @@
+<!doctype html>
+<html ng-app="myapp">
+<head>
+    <title>Angular JS</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <script type="application/javascript" src="jquery.min.js"></script>
+    <script type="application/javascript" src="bootstrap.min.js"></script>
+    <script type="application/javascript" src="angular.min.js"></script>
+    <script type="application/javascript">
+        var app = angular.module('myapp',[]);
+        app.controller('mycontroller1', function ($scope) {
+            $scope.btn_click = function () {
+                alert('Clicked');
+            }
+        });
+    </script>
+</head>
+<body>
+<div ng-controller="mycontroller1">
+    <button ng-dblclick="btn_click()" value="Click" class="btn btn-primary">CLick HERE</button>
+</div>
+</body>
+</html>
